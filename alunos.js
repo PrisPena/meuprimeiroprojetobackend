@@ -28,7 +28,8 @@ const swaggerOptions = {
         },
         servers: [
             {
-                url: `http://localhost:${porta}`,
+                // url: `http://localhost:${porta}`,
+                url: `https://alunos-f46u.onrender.com`,
             },
         ],
     },
