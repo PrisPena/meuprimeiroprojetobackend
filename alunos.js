@@ -1,3 +1,4 @@
+const cors = require('cors');
 const swaggerJsdoc = require('swagger-jsdoc');
 const swaggerUi = require('swagger-ui-express');
 
@@ -13,6 +14,7 @@ conectaBancoDeDados() // chamando a função que conecta o banco de dados
 const aluno = require("./alunoModel") // aqui estou ligando ao arquivo alunoModel
 
 const app = express() // aqui estou iniciando o app
+app.use(cors());
 app.use(express.json()) //aqui eu digo que o app tem que usar o json do express para os requests
 const porta = 3333 // aqui estou criando a porta 
 
