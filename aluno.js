@@ -6,7 +6,6 @@ const porta = 3333
 
 function mostraAlunos(request, response){
     response.json({
-        id: 1,
         nome: "Priscila Pena",
         idade: 31,
         notapsemestre: 10,

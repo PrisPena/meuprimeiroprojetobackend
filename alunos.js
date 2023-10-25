@@ -15,7 +15,7 @@ const porta = 3333 // aqui estou criando a porta
 async function mostraAlunos(request, response) {
     try{
         const alunosVindosDoBancoDeDados = await aluno.find()
-        response.json(alunosVindosDoBancoDeDadosVindasDoBancoDeDados)
+        response.json(alunosVindosDoBancoDeDados)
         
     } catch(erro) {
         console.log(erro)
@@ -25,7 +25,6 @@ async function mostraAlunos(request, response) {
 // função POST
 async function criaAluno (request, response){
     const novoAluno = new aluno({
-        id: request.body.id,
         nome: request.body.nome,
         idade: request.body.idade,
         notapsemestre: request.body.notapsemestre, 
@@ -34,7 +33,7 @@ async function criaAluno (request, response){
         sala: request.body.sala,
     })
     try {
-        const alunoCriado = await novaAluno.save()
+        const alunoCriado = await novoAluno.save()
         response.status(201).json(alunoCriado)
 
     } catch(erro) {
